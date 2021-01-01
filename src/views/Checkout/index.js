@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import { Container } from './styles';
+import { Container, Input, Select, InputContainer } from './styles';
 
 const Checkout = () => {
   const [cardNumber, setCardNumber] = useState('');
   const [cardName, setCardName] = useState('');
   const [cardValidate, setCardValidate] = useState('');
   const [cardCVV, setCardCVV] = useState('');
-  const [cardInstallment, setCardInstallment] = useState(1);
+  const [cardInstallment, setCardInstallment] = useState(null);
 
   const handleCardNumber = (event) => {
     setCardNumber(event.target.value);
@@ -39,39 +39,44 @@ const Checkout = () => {
           cardName={cardName}
           cardValidate={cardValidate}
         />
-        <input
+        <Input
           type="text"
           name="card-number"
           placeholder="Número do seu cartão"
           value={cardNumber}
           onChange={handleCardNumber}
         />
-        <input
+        <Input
           type="text"
           name="card-name"
           placeholder="Nome (igual ao cartão)"
           value={cardName}
           onChange={handleCardName}
         />
-        <input
-          type="text"
-          name="card-validate"
-          placeholder="Validate"
-          value={cardValidate}
-          onChange={handleCardValidate}
-        />
-        <input
-          type="number"
-          name="card-cvv"
-          placeholder="CVV"
-          value={cardCVV}
-          onChange={handleCardCVV}
-        />
-        <select
+        <InputContainer>
+          <Input
+            type="text"
+            name="card-validate"
+            placeholder="Validate"
+            value={cardValidate}
+            onChange={handleCardValidate}
+          />
+          <Input
+            type="number"
+            name="card-cvv"
+            placeholder="CVV"
+            value={cardCVV}
+            onChange={handleCardCVV}
+          />
+        </InputContainer>
+        <Select
           name="card-installment"
           value={cardInstallment}
           onChange={handleCardInstallment}
         >
+          <option value="null" selected disabled>
+            Número de parcelas
+          </option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -84,7 +89,7 @@ const Checkout = () => {
           <option value="10">10</option>
           <option value="11">11</option>
           <option value="12">12</option>
-        </select>
+        </Select>
         <Button>Continuar</Button>
       </Container>
     </>
