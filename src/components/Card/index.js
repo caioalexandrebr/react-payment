@@ -11,14 +11,14 @@ import {
 import cardFrontEmpty from './images/card-front-empty.svg';
 import cardBackEmpty from './images/card-back-empty.svg';
 
-const Card = () => (
+const Card = ({ cardNumber, cardName, cardValidate }) => (
   <>
     <CardContainer>
       <CardFront>
-        <CardText>* * * * * * * * * * * * * * * *</CardText>
+        <CardText>{cardNumber || '* * * * * * * * * * * * * * * *'}</CardText>
         <div>
-          <CardText>NOME DO TITULAR</CardText>
-          <CardText>00/00</CardText>
+          <CardText>{cardName || 'NOME DO TITULAR'}</CardText>
+          <CardText>{cardValidate || '00/00'}</CardText>
         </div>
         <CardBackground src={cardFrontEmpty} alt="" />
       </CardFront>
