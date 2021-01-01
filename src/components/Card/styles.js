@@ -4,14 +4,16 @@ import { colors, fontSizes } from '../../tokens';
 
 const CardStyle = `
   backface-visibility: hidden;
+  box-sizing: border-box;
   display: inline-block;
   height: 172px;
   left: 0;
+  padding: 10px;
   position: absolute;
   top: 0;
   transform-style: preserve-3d;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  width: 280px;
+  width: 100%;
   z-index: 1000;
 `;
 
@@ -27,7 +29,7 @@ export const CardBack = styled.div`
 
 export const CardContainer = styled.div`
   height: 172px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   perspective: 600px;
   width: 280px;
 

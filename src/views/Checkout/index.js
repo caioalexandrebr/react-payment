@@ -2,7 +2,17 @@ import React, { useState } from 'react';
 
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import { Container, Input, Select, InputContainer } from './styles';
+import {
+  Container,
+  Breadcrumb,
+  TitleContainer,
+  Title,
+  Input,
+  Select,
+  InputContainer,
+} from './styles';
+
+import cardImage from './images/card.svg';
 
 const Checkout = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -34,6 +44,13 @@ const Checkout = () => {
   return (
     <>
       <Container>
+        <Breadcrumb>
+          <strong>Etapa 2</strong> de 3
+        </Breadcrumb>
+        <TitleContainer>
+          <img src={cardImage} alt="" />
+          <Title>Adicione um novo cartão de crédito</Title>
+        </TitleContainer>
         <Card
           cardNumber={cardNumber}
           cardName={cardName}
