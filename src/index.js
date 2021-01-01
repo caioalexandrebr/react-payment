@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Normalize } from 'styled-normalize';
 
-import Button from './components/Button';
+import Checkout from './views/Checkout';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Button>Olá mundo!</Button>
-  </React.StrictMode>,
-  document.getElementById('root'),
+const Root = () => (
+  <>
+    <Normalize />
+    <Checkout />
+  </>
 );
+
+ReactDOM.render(<Root />, document.querySelector('#root'));
