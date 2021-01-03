@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import { Container } from '../../components/Container';
 import {
   Breadcrumb,
+  CheckoutContainer,
   TitleContainer,
   Title,
   Input,
   Select,
   InputContainer,
 } from './styles';
-
 import cardImage from './images/card.svg';
 
 const Checkout = () => {
@@ -43,7 +42,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Container>
+      <CheckoutContainer>
         <Breadcrumb>
           <strong>Etapa 2</strong> de 3
         </Breadcrumb>
@@ -108,7 +107,7 @@ const Checkout = () => {
           <option value="12">12</option>
         </Select>
         <Button>Continuar</Button>
-      </Container>
+      </CheckoutContainer>
     </>
   );
 };
