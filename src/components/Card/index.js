@@ -18,7 +18,7 @@ const Card = ({ cardNumber, cardName, cardValidate }) => (
     <CardContainer>
       <CardFront>
         <CardNumber>
-          {cardNumber || '* * * * * * * * * * * * * * * *'}
+          {cardNumber || '* * * *     * * * *     * * * *     * * * *'}
         </CardNumber>
         <div>
           <CardName>{cardName || 'NOME DO TITULAR'}</CardName>

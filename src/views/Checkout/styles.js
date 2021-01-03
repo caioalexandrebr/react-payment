@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
 import { colors, fontFamilies, fontSizes } from '../../tokens';
-
 import { Container } from '../../components/Container';
 
 export const CheckoutContainer = styled(Container)`
@@ -49,7 +49,7 @@ export const InputSelectStyle = `
   }
 `;
 
-export const Input = styled.input`
+export const Input = styled(InputMask)`
   ${InputSelectStyle}
 `;
 

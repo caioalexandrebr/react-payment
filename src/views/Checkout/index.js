@@ -56,6 +56,7 @@ const Checkout = () => {
           cardValidate={cardValidate}
         />
         <Input
+          mask="9 9 9 9     9 9 9 9     9 9 9 9     9 9 9 9"
           type="text"
           name="card-number"
           placeholder="Número do seu cartão"
@@ -65,12 +66,14 @@ const Checkout = () => {
         <Input
           type="text"
           name="card-name"
+          maxlength="50"
           placeholder="Nome (igual ao cartão)"
           value={cardName}
           onChange={handleCardName}
         />
         <InputContainer>
           <Input
+            mask="99/99"
             type="text"
             name="card-validate"
             placeholder="Validate"
@@ -78,6 +81,7 @@ const Checkout = () => {
             onChange={handleCardValidate}
           />
           <Input
+            mask="999"
             type="number"
             name="card-cvv"
             placeholder="CVV"
