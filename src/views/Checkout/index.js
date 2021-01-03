@@ -18,7 +18,7 @@ const Checkout = () => {
   const [cardName, setCardName] = useState('');
   const [cardValidate, setCardValidate] = useState('');
   const [cardCVV, setCardCVV] = useState('');
-  const [cardInstallment, setCardInstallment] = useState(null);
+  const [cardInstallment, setCardInstallment] = useState(0);
 
   const handleCardNumber = (event) => {
     setCardNumber(event.target.value);
@@ -66,7 +66,7 @@ const Checkout = () => {
         <Input
           type="text"
           name="card-name"
-          maxlength="50"
+          maxLength="50"
           placeholder="Nome (igual ao cartão)"
           value={cardName}
           onChange={handleCardName}
@@ -82,7 +82,7 @@ const Checkout = () => {
           />
           <Input
             mask="999"
-            type="number"
+            type="text"
             name="card-cvv"
             placeholder="CVV"
             value={cardCVV}
@@ -94,7 +94,7 @@ const Checkout = () => {
           value={cardInstallment}
           onChange={handleCardInstallment}
         >
-          <option value="null" selected disabled>
+          <option value="0" selected disabled>
             Número de parcelas
           </option>
           <option value="1">1</option>
