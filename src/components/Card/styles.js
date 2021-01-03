@@ -8,7 +8,7 @@ const CardStyle = `
   display: inline-block;
   height: 172px;
   left: 0;
-  padding: 10px;
+  padding: 20px;
   position: absolute;
   top: 0;
   transform-style: preserve-3d;
@@ -50,8 +50,25 @@ export const CardBackground = styled.img`
   z-index: -1;
 `;
 
-export const CardText = styled.span`
+export const CardText = `
   color: ${colors.white};
-  font-size: ${fontSizes.large}px;
+  font-size: ${fontSizes.medium}px;
+  position: absolute;
   text-shadow: 0px 1px 2px ${colors.dark};
+`;
+
+export const CardNumber = styled.span`
+  ${CardText}
+  top: 78px;
+`;
+
+export const CardName = styled.span`
+  ${CardText}
+  top: 120px;
+`;
+
+export const CardValidate = styled.span`
+  ${CardText}
+  left: 78%;
+  top: 120px;
 `;

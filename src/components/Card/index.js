@@ -5,7 +5,9 @@ import {
   CardFront,
   CardBack,
   CardBackground,
-  CardText,
+  CardNumber,
+  CardName,
+  CardValidate,
 } from './styles';
 
 import cardFrontEmpty from './images/card-front-empty.svg';
@@ -15,10 +17,12 @@ const Card = ({ cardNumber, cardName, cardValidate }) => (
   <>
     <CardContainer>
       <CardFront>
-        <CardText>{cardNumber || '* * * * * * * * * * * * * * * *'}</CardText>
+        <CardNumber>
+          {cardNumber || '* * * * * * * * * * * * * * * *'}
+        </CardNumber>
         <div>
-          <CardText>{cardName || 'NOME DO TITULAR'}</CardText>
-          <CardText>{cardValidate || '00/00'}</CardText>
+          <CardName>{cardName || 'NOME DO TITULAR'}</CardName>
+          <CardValidate>{cardValidate || '00/00'}</CardValidate>
         </div>
         <CardBackground src={cardFrontEmpty} alt="" />
       </CardFront>
