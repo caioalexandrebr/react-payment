@@ -1,9 +1,13 @@
-import fontSizes from './font-sizes';
+import breakpoints from './breakpoints';
 import colors from './colors';
+import fontSizes from './font-sizes';
+import media from './media';
 
 const tokens = {
-  fontSizes,
+  breakpoints,
   colors,
+  fontSizes,
+  media,
 };
 
-export { tokens as default, colors, fontSizes };
+export { tokens as default, breakpoints, colors, fontSizes, media };
