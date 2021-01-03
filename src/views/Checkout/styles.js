@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+
 import InputMask from 'react-input-mask';
-import { colors, fontFamilies, fontSizes } from '../../tokens';
+import arrowLeft from './images/left-arrow.svg';
 import { Container } from '../../components/Container';
+import { colors, fontFamilies, fontSizes } from '../../tokens';
 
 export const CheckoutContainer = styled(Container)`
   background: linear-gradient(0deg, ${colors.white} 66%, ${colors.primary} 66%);
+  padding-top: 40px;
 `;
 
 export const Breadcrumb = styled.span`
@@ -12,9 +15,20 @@ export const Breadcrumb = styled.span`
   display: block;
   font-family: ${fontFamilies.primary};
   font-size: ${fontSizes.medium}px;
-  padding-top: 40px;
-  text-align: center;
   margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    content: '';
+    background-image: url(${arrowLeft});
+    background-repeat: no-repeat;
+    height: 20px;
+    left: -30px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+  }
 `;
 
 export const TitleContainer = styled.div`
