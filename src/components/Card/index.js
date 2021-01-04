@@ -17,13 +17,9 @@ const Card = ({ cardNumber, cardName, cardValidate }) => (
   <>
     <CardContainer>
       <CardFront>
-        <CardNumber>
-          {cardNumber || '* * * *     * * * *     * * * *     * * * *'}
-        </CardNumber>
-        <div>
-          <CardName>{cardName || 'NOME DO TITULAR'}</CardName>
-          <CardValidate>{cardValidate || '00/00'}</CardValidate>
-        </div>
+        <CardNumber>{cardNumber || '****   ****   ****   ****'}</CardNumber>
+        <CardName>{cardName || 'NOME DO TITULAR'}</CardName>
+        <CardValidate>{cardValidate || '00/00'}</CardValidate>
         <CardBackground src={cardFrontEmpty} alt="" />
       </CardFront>
       <CardBack>

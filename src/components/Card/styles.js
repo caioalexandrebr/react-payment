@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, fontSizes } from '../../tokens';
+import { colors, fontFamilies, fontSizes } from '../../tokens';
 
 const CardStyle = `
   backface-visibility: hidden;
@@ -52,23 +52,27 @@ export const CardBackground = styled.img`
 
 export const CardText = `
   color: ${colors.white};
-  font-size: ${fontSizes.medium}px;
+  font-family: ${fontFamilies.secondary};
   position: absolute;
   text-shadow: 0px 1px 2px ${colors.dark};
 `;
 
 export const CardNumber = styled.span`
   ${CardText}
+  font-size: ${fontSizes.large}px;
+  letter-spacing: 2.5px;
   top: 78px;
 `;
 
 export const CardName = styled.span`
   ${CardText}
+  font-size: ${fontSizes.xsmall}px;
   top: 120px;
 `;
 
 export const CardValidate = styled.span`
   ${CardText}
-  left: 78%;
+  font-size: ${fontSizes.xsmall}px;
+  left: 80%;
   top: 120px;
 `;

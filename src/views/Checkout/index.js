@@ -25,7 +25,7 @@ const Checkout = () => {
   };
 
   const handleCardName = (event) => {
-    setCardName(event.target.value);
+    setCardName(event.target.value.toUpperCase());
   };
 
   const handleCardCVV = (event) => {
@@ -56,7 +56,7 @@ const Checkout = () => {
           cardValidate={cardValidate}
         />
         <Input
-          mask="9 9 9 9     9 9 9 9     9 9 9 9     9 9 9 9"
+          mask="9999  9999  9999  9999"
           type="text"
           name="card-number"
           placeholder="Número do seu cartão"

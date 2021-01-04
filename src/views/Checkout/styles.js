@@ -64,12 +64,6 @@ export const InputSelectStyle = `
 `;
 
 export const Input = styled(InputMask)`
-  text-transform: uppercase;
-
-  &::placeholder {
-    text-transform: none;
-  }
-
   ${InputSelectStyle}
 `;
 
