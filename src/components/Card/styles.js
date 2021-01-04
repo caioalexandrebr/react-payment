@@ -33,11 +33,11 @@ export const CardContainer = styled.div`
   perspective: 600px;
   width: 280px;
 
-  &:hover ${CardFront} {
+  &.flipped ${CardFront} {
     transform: rotateY(180deg);
   }
 
-  &:hover ${CardBack} {
+  &.flipped ${CardBack} {
     transform: rotateY(0deg);
   }
 `;

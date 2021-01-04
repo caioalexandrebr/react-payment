@@ -3,11 +3,32 @@ import styled from 'styled-components';
 import InputMask from 'react-input-mask';
 import arrowLeft from './images/left-arrow.svg';
 import { Container } from '../../components/Container';
-import { colors, fontFamilies, fontSizes } from '../../tokens';
+import { colors, fontFamilies, fontSizes, media } from '../../tokens';
 
 export const CheckoutContainer = styled(Container)`
   background: linear-gradient(0deg, ${colors.white} 66%, ${colors.primary} 66%);
   padding-top: 40px;
+
+  ${media.lg} {
+    background: linear-gradient(
+      -90deg,
+      ${colors.white} 66%,
+      ${colors.primary} 66%
+    );
+    display: flex;
+  }
+`;
+
+export const ColCard = styled.div`
+  ${media.lg} {
+    flex: 2;
+  }
+`;
+
+export const ColInfos = styled.div`
+  ${media.lg} {
+    flex: 3;
+  }
 `;
 
 export const Breadcrumb = styled.span`

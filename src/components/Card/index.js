@@ -13,9 +13,9 @@ import {
 import cardFrontEmpty from './images/card-front-empty.svg';
 import cardBackEmpty from './images/card-back-empty.svg';
 
-const Card = ({ cardNumber, cardName, cardValidate }) => (
+const Card = ({ cardNumber, cardName, cardValidate, flipped }) => (
   <>
-    <CardContainer>
+    <CardContainer className={`${flipped && 'flipped'}`}>
       <CardFront>
         <CardNumber>{cardNumber || '****   ****   ****   ****'}</CardNumber>
         <CardName>{cardName || 'NOME DO TITULAR'}</CardName>
