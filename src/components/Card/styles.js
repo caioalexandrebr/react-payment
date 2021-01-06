@@ -73,14 +73,6 @@ export const CardName = styled.span`
 export const CardValidate = styled.span`
   ${CardText}
   font-size: ${fontSizes.xsmall}px;
-  left: 83%;
+  left: 80%;
   top: 120px;
-`;
-
-export const CardCVV = styled.span`
-  ${CardText}
-  color: ${colors.secondary};
-  left: 50%;
-  text-shadow: none;
-  top: 80px;
 `;

@@ -74,17 +74,10 @@ export const InputSelectStyle = `
   background: ${colors.white};
   border: none;
   border-bottom: 1px solid ${colors.gray};
-  color: ${colors.secondary};
+  color: ${colors.gray};
   margin-bottom: 40px;
   padding: 8px 0;
   width: 100%;
-
-  font-size: ${fontSizes.medium}px;
-  font-family: ${fontFamilies.primary};
-
-  &::placeholder {
-    color: ${colors.gray};
-  }
 
   &:focus {
     outline: none;

@@ -39,7 +39,6 @@ const Checkout = () => {
             cardNumber={cardNumber}
             cardName={cardName}
             cardValidate={cardValidate}
-            cardCVV={cardCVV.replace(/[0-9]/g, '∗')}
           />
         </ColCard>
         <ColInfos>
